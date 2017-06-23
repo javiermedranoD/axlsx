@@ -1,2 +1,8 @@
 <h1>List of products</h1>
-<%= link_to 'Download as .xlsx', products_path(format: :xlsx) %>
+<%= link_to 'Download as .xlsx', products_path(format: :xlsx) %><hr>
+<%  @products_list.each do |c| %>
+	<p>
+	Product: <b><%= c.title %></b><br>
+	Price: $<b><%= c.price%></b><br>
+	</p>
+<% end %>
